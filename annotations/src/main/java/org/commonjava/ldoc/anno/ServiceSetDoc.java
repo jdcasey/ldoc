@@ -6,7 +6,15 @@ import java.lang.annotation.RetentionPolicy;
 
 @Retention( RetentionPolicy.RUNTIME )
 @Inherited
-public @interface RestServiceSetDoc
+public @interface ServiceSetDoc
 {
+
+    String shortDesc();
+
+    String longDesc() default "";
+
+    String since() default "";
+
+    String[] apiVersions() default {};
 
 }
